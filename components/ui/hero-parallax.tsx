@@ -45,7 +45,7 @@ export const HeroParallax = ({
     springConfig
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 1.2], [0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.2], [0.15, 1]),
     springConfig
   );
   const rotateZ = useSpring(
@@ -106,11 +106,11 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl flex flex-col sm:flex-row  z-50 relative mx-auto py-0 md:py-30 px-4 w-full ">
+    <div className="max-w-7xl flex flex-col sm:flex-row -py-24  z-50 relative mx-auto  md:py-30 px-4 w-full ">
 
      <div className="sm:w-1/2 w-full">
      <h1 className="text-3xl mt-6 md:text-7xl font-bold dark:text-white">
-      Your Vision,<br />Our Edit
+      Your Vision,<br /> Our Edit
       </h1>
       <p className="max-w-xl text-xl  mb-6 md:text-2xl font-medium mt-8 dark:text-neutral-200">
       On-Demand Video Editing Support for Growing Businesses.

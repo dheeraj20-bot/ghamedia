@@ -12,10 +12,7 @@ interface Props {
 }
 
 const CustomLinks = ({href,title,className=""}:Props)=>{
-  const pathname = usePathname()
-  console.log(pathname);
-  
-  
+  const pathname = usePathname()  
     return(
       <Link href={href} className={`${className} relative group`}>
          {title}
@@ -36,9 +33,10 @@ export const Header = () => {
 
         <nav className='flex items-center  space-x-6'>
         <CustomLinks href="/" title="Home" className='mr-4'/>
-           <CustomLinks href="/about" title="About" className='mx-4'/>
-           <CustomLinks href="/projects" title="Projects" className='mx-4'/>
-           <CustomLinks href="/blog" title="Blogs" className='ml-4'/>
+           <CustomLinks href="/services" title="Services" className='mx-4'/>
+           <CustomLinks href="/our-plans" title="Our Plans" className='mx-4'/>
+           <CustomLinks href="/blog" title="Blogs" className='mx-4'/>
+           <CustomLinks href="/about" title="About Us" className='ml-4'/>
         </nav>
        
       <ModeToggle/>

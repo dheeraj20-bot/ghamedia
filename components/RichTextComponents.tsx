@@ -6,7 +6,7 @@ export const RichTextComponents = {
     types:{
        image:({value}:any)=>{
         return (
-            <div className=" relative w-full  h-[10rem] sm:h-[25rem] mt-10 rounded-md  overflow-hidden mx-auto">
+            <div className=" relative w-full   h-[10rem] sm:h-[26rem] mt-10 rounded-md border  bg-black   overflow-hidden mx-auto">
               <Image
               className=" hover:scale-105  object-center aspect-square duration-200 transition-all object-cover"
               src={urlFor(value).url()}
