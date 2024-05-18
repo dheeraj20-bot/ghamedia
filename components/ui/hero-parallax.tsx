@@ -59,7 +59,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased 
+      className="h-[340vh] py-10 overflow-hidden  antialiased 
       relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
@@ -106,35 +106,38 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl flex flex-col sm:flex-row -py-24  z-50 relative mx-auto  md:py-30 px-4 w-full ">
+    <motion.div
+
+    whileHover={{ scale: 1.1 }}
+  className="max-w-[85rem] flex b py-44  items-center justify-center  flex-col sm:flex-row  
+     z-50 relative mx-auto  px-4 w-full ">
 
      <div className="sm:w-1/2 w-full">
-     <h1 className="text-3xl mt-6 md:text-7xl font-bold dark:text-white">
-      Your Vision,<br /> Our Edit
+     <h1 className="text-4xl text-slate-900 mt-6 w-full  sm:max-w-lg md:text-7xl font-bold dark:text-white">
+      Your Vision, Our Edit
       </h1>
-      <p className="max-w-xl text-xl  mb-6 md:text-2xl font-medium mt-8 dark:text-neutral-200">
+      <p className="max-w-xl text-xl text-gray-800  mb-6 md:text-2xl font-medium mt-6 dark:text-gray-400">
       On-Demand Video Editing Support for Growing Businesses.
       </p>
-      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-lg border border-slate-800  bg-gradient-to-l from-slate-700  to-slate-900/10 bg-[length:200%_100%] 
-      px-6 font-medium text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-        Book a call
-      </button>
+      
      </div>
 
-     <div className="sm:w-1/2 w-full">
+     <div 
+    
+     className="sm:w-1/2 w-full ">
 
      <Image
-          src="/images/hero.svg"
-          height="400"
-          width="400"
-          className="object-cover z-50 h-full w-full mt-0 sm:-mt-6"
+          src="/images/hero.png"
+          height="1000"
+          width="1000"
+          className=" z-50  h-full  object-cover w-full "
           alt="22"
           priority
         />
         
      </div>
       
-    </div>
+    </motion.div>
   );
 };
 
